@@ -46,21 +46,21 @@ export default function ContentCard({ title, url, thumbnail }: Props) {
   return (
     <div
       onClick={handleClick}
-      className="cursor-pointer border rounded-xl shadow hover:shadow-lg transition duration-200 flex flex-col items-center bg-black w-[240px] h-[300px]"
+      className="cursor-pointer border rounded-xl shadow hover:shadow-lg transition duration-200 bg-black aspect-[3/4] flex flex-col justify-between items-center w-full"
     >
-      {/* 이미지 영역 (고정 높이) */}
-      <div className="flex items-center justify-center h-[200px] w-full bg-black">
+      {/* 이미지 */}
+      <div className="flex items-center justify-center flex-1 px-2 pt-3">
         <Image
           src={thumbnail}
           alt={title}
-          width={300}
-          height={300}
-          className="object-contain"
+          width={160}
+          height={160}
+          className="object-contain w-full h-full"
         />
       </div>
 
-      {/* 텍스트 영역 (하단 고정) */}
-      <div className="p-3 font-semibold text-lg text-center w-full">
+      {/* 텍스트 */}
+      <div className="p-2 font-semibold text-sm text-center w-full">
         {title}
       </div>
     </div>
