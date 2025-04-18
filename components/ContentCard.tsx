@@ -54,9 +54,6 @@ export default function ContentCard({ title, url, thumbnail }: Props) {
         width={300}
         height={300}
         className="w-full h-48 object-cover"
-        style={{
-          filter: "invert(var(--invert-img, 0)) grayscale(1)",
-        }}
       />
       <div className="p-4 font-semibold text-lg">{title}</div>
     </div>
