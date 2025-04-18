@@ -1,0 +1,15 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql" // 혹은 mysql, sqlite 등
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int     @id @default(autoincrement())
+  ip        String  @unique
+  nickname  String
+  createdAt DateTime @default(now())
+}
