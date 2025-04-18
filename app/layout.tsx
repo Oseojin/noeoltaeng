@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <Analytics />
-      <body>{children}</body>
+      <body className="bg-black text-white">{children}</body>
     </html>
   );
 }
