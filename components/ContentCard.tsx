@@ -46,16 +46,21 @@ export default function ContentCard({ title, url, thumbnail }: Props) {
   return (
     <div
       onClick={handleClick}
-      className="cursor-pointer border rounded-xl overflow-hidden shadow hover:shadow-lg transition duration-200"
+      className="cursor-pointer border rounded-xl overflow-hidden shadow hover:shadow-lg transition duration-200 flex flex-col items-center bg-black"
     >
       <Image
         src={thumbnail}
         alt={title}
-        width={300}
-        height={300}
-        className="w-full h-48 object-contain bg-black"
+        width={400}
+        height={225}
+        className="w-full max-h-[200px] object-contain"
+        style={{
+          filter: "invert(var(--invert-img, 0)) grayscale(1)",
+        }}
       />
-      <div className="p-4 font-semibold text-lg">{title}</div>
+      <div className="p-4 font-semibold text-lg text-center w-full">
+        {title}
+      </div>
     </div>
   );
 }
