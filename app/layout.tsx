@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "얼탱이 없는 모음",
-  description: "여러 사이트를 하나로 묶는 메인 포털",
+  title: "A Bunch of Idiots",
+  description: "The Idiot Hub",
 };
 
 export default function RootLayout({

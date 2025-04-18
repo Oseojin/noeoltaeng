@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
     nickname.length > 20
   ) {
     return NextResponse.json(
-      { error: "닉네임은 1자 이상 20자 이하로 입력해주세요." },
+      { error: "Please enter a nickname between 1 and 20 characters." },
       { status: 400 }
     );
   }

@@ -32,7 +32,7 @@ export default function ContentCard({ title, url, thumbnail }: Props) {
     const data = await nicknameRes.json();
 
     if (!data.nickname) {
-      alert("닉네임을 먼저 설정해주세요!");
+      alert("Please set your nickname first!");
       return;
     }
 

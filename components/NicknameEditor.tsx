@@ -59,7 +59,7 @@ export default function NicknameEditor() {
       setShowWarning(false); // 저장 성공 시 경고 제거
     } else {
       const err = await res.json();
-      alert(err.error ?? "닉네임 저장 중 오류 발생");
+      alert(err.error ?? "Nickname Save Error");
     }
   };
 
@@ -67,7 +67,7 @@ export default function NicknameEditor() {
     <div className="flex flex-col items-end gap-2">
       {showWarning && (
         <div className="text-red-500 text-sm">
-          ⚠️ 닉네임을 먼저 설정해주세요!
+          ⚠️ Please set your nickname first!
         </div>
       )}
       <div className="flex gap-2 items-center">
@@ -82,12 +82,12 @@ export default function NicknameEditor() {
               onClick={handleSave}
               className="bg-blue-500 text-white px-2 py-1 rounded"
             >
-              저장
+              Save
             </button>
           </>
         ) : (
           <span onClick={() => setEditing(true)} className="cursor-pointer">
-            닉네임: {nickname || "없음"} (클릭하여 수정)
+            Nickname: {nickname || "None"} (Click to Change)
           </span>
         )}
       </div>
