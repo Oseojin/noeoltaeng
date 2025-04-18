@@ -8,8 +8,8 @@ datasource db {
 }
 
 model User {
-  id        Int     @id @default(autoincrement())
-  ip        String  @unique
+  id        Int      @id @default(autoincrement())
+  deviceId  String   @unique
   nickname  String
   createdAt DateTime @default(now())
 }
