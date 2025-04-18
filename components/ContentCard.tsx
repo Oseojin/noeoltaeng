@@ -51,9 +51,9 @@ export default function ContentCard({ title, url, thumbnail }: Props) {
       <Image
         src={thumbnail}
         alt={title}
-        width={400}
-        height={225}
-        className="w-full h-48 object-cover grayscale"
+        width={300}
+        height={300}
+        className="w-full h-48 object-cover"
         style={{
           filter: "invert(var(--invert-img, 0)) grayscale(1)",
         }}
