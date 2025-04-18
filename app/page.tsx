@@ -5,12 +5,12 @@ const contentList = [
   {
     title: "OIIA",
     url: "https://oiiaoiia.net",
-    thumbnail: "/thumbnails/game.png",
+    thumbnail: "/thumbnails/oiiacat.png",
   },
   {
     title: "EAT CHEESE",
     url: "https://eat-cheese.vercel.app",
-    thumbnail: "/thumbnails/test.png",
+    thumbnail: "/thumbnails/eat_cheese.png",
   },
 ];
 
@@ -21,7 +21,7 @@ export default function HomePage() {
       style={{ background: "var(--background)", color: "var(--foreground)" }}
     >
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-3xl font-bold">🔗 얼탱이 없는 모음</h1>
+        <h1 className="text-3xl font-bold">NOEOLTAENG</h1>
         <NicknameEditor />
       </div>
       <div className="grid grid-cols-2 gap-6 mt-6">

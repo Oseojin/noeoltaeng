@@ -87,7 +87,7 @@ export default function NicknameEditor() {
           </>
         ) : (
           <span onClick={() => setEditing(true)} className="cursor-pointer">
-            🧑‍💻 닉네임: {nickname || "없음"} (클릭하여 수정)
+            닉네임: {nickname || "없음"} (클릭하여 수정)
           </span>
         )}
       </div>
