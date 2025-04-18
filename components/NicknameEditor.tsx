@@ -56,7 +56,7 @@ export default function NicknameEditor() {
 
     if (res.ok) {
       setEditing(false);
-      setShowWarning(false); // 저장 성공 시 경고 제거
+      setShowWarning(false);
     } else {
       const err = await res.json();
       alert(err.error ?? "Nickname Save Error");
@@ -64,33 +64,35 @@ export default function NicknameEditor() {
   };
 
   return (
-    <div className="flex flex-col items-end gap-2">
+    <div className="mt-2 text-sm text-white flex flex-col items-start gap-1">
       {showWarning && (
-        <div className="text-red-500 text-sm">
+        <div className="text-yellow-400 text-sm">
           ⚠️ Please set your nickname first!
         </div>
       )}
-      <div className="flex gap-2 items-center">
-        {editing ? (
-          <>
-            <input
-              value={nickname}
-              onChange={(e) => setNickname(e.target.value)}
-              className="border rounded px-2 py-1"
-            />
-            <button
-              onClick={handleSave}
-              className="bg-blue-500 text-white px-2 py-1 rounded"
-            >
-              Save
-            </button>
-          </>
-        ) : (
-          <span onClick={() => setEditing(true)} className="cursor-pointer">
-            Nickname: {nickname || "None"} (Click to Change)
-          </span>
-        )}
-      </div>
+      {editing ? (
+        <div className="flex gap-2 items-center">
+          <input
+            value={nickname}
+            onChange={(e) => setNickname(e.target.value)}
+            placeholder="Enter nickname"
+            className="px-3 py-1 rounded border border-gray-500 bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+          <button
+            onClick={handleSave}
+            className="px-3 py-1 rounded bg-blue-600 hover:bg-blue-700 text-white text-sm"
+          >
+            Save
+          </button>
+        </div>
+      ) : (
+        <span
+          onClick={() => setEditing(true)}
+          className="cursor-pointer hover:underline"
+        >
+          Nickname: {nickname || "None"} (Click to Change)
+        </span>
+      )}
     </div>
   );
 }

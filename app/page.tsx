@@ -17,10 +17,12 @@ const contentList = [
 export default function HomePage() {
   return (
     <main className="min-h-screen flex flex-col">
-      {/* 상단 헤더 */}
-      <div className="p-4 flex justify-between items-center h-[20vh]">
-        <h1 className="text-3xl font-bold">NOEOLTAENG</h1>
-        <NicknameEditor />
+      {/* 헤더 (타이틀 + 닉네임) */}
+      <div className="p-6 h-[20vh]">
+        <h1 className="text-3xl font-bold text-white">NOEOLTAENG</h1>
+        <div className="mt-2">
+          <NicknameEditor />
+        </div>
       </div>
 
       {/* 앨범 영역 */}
