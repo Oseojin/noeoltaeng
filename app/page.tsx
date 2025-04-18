@@ -8,8 +8,8 @@ const contentList = [
     thumbnail: "/thumbnails/game.png",
   },
   {
-    title: "심리 테스트",
-    url: "https://test.example.com",
+    title: "EAT CHEESE",
+    url: "https://eat-cheese.vercel.app",
     thumbnail: "/thumbnails/test.png",
   },
 ];
