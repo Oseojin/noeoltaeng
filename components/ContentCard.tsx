@@ -46,14 +46,14 @@ export default function ContentCard({ title, url, thumbnail }: Props) {
   return (
     <div
       onClick={handleClick}
-      className="cursor-pointer border rounded-xl overflow-hidden shadow hover:shadow-lg transition duration-200 flex flex-col items-center bg-black"
+      className="cursor-pointer border rounded-xl shadow hover:shadow-lg transition duration-200 flex flex-col items-center bg-black w-auto max-w-fit"
     >
       <Image
         src={thumbnail}
         alt={title}
-        width={400}
-        height={225}
-        className="w-full max-h-[200px] object-contain"
+        width={300} // 실제 이미지 크기 기준
+        height={200}
+        className="object-contain bg-black"
       />
       <div className="p-4 font-semibold text-lg text-center w-full">
         {title}
