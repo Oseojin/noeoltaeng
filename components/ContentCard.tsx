@@ -53,7 +53,7 @@ export default function ContentCard({ title, url, thumbnail }: Props) {
         alt={title}
         width={300}
         height={300}
-        className="w-full h-48 object-cover"
+        className="w-full h-48 object-contain bg-black"
       />
       <div className="p-4 font-semibold text-lg">{title}</div>
     </div>
