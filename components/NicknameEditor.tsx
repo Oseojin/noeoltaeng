@@ -59,7 +59,11 @@ export default function NicknameEditor() {
       setShowWarning(false);
     } else {
       const err = await res.json();
-      alert(err.error ?? "Nickname Save Error");
+      if (res.status === 409) {
+        alert("This nickname is already taken.");
+      } else {
+        alert(err.error ?? "Nickname Save Error");
+      }
     }
   };
 
