@@ -12,6 +12,11 @@ const contentList = [
     url: "https://eat-cheese.vercel.app",
     thumbnail: "/thumbnails/eat_cheese.png",
   },
+  {
+    title: "Confirm Speed Test",
+    url: "https://confirm-speed-test.vercel.app/",
+    thumbnail: "/thumbnails/confirm_speed_test.png",
+  },
 ];
 
 export default function HomePage() {
